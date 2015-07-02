@@ -1,0 +1,8 @@
+Those are ActionScript 1.0 code examples based mostly upon Sham Bhangal's Flash hacks and
+Joey Lott's ActionScript Cookbook. Ruby language is used only as a glue for various AS 1.0
+templates and subroutines. The most advanced script: circle.rb consists of 8 parts of code.
+
+Please note, that you have to copy circles.xml, picture.jpg and backyard1.jpg files together with
+generated circle.swf and mask.swf files in order to make it work.
+
+Files in catalogue /aa are borrowed from Joey Lott's book.   

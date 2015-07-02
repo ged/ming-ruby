@@ -1,0 +1,7 @@
+Those are rewritten into Ruby code examples found in various places on the Internet.
+The main contributors are Brinkster's PHP-Ming code examples service, RedHot Pepper JP, Peter
+Liscovius, Kirupa's and Kumamushi web pages. Every file has it's authorship note. In case if you
+are not mentioned here please write to me on pkarwow at fastmail dot fm
+
+Please note, that in order to make some examples to work you have to copy to the destination folder
+following files: books.xml, colvar.txt, vars0.txt, vars1.txt, vars2.txt

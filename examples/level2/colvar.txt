@@ -1,0 +1,1 @@
+colvar.txt=&clipcolor=15025&thatis=it&

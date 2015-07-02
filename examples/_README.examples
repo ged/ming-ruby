@@ -1,0 +1,18 @@
+Ming library documentation is still very sparse, anyway quite a number of freely available on Internet
+code examples written in various languages must be considered a perfect replacment. I have
+gathered almost all of those GPL licenced scripts here, I have translated PHP, C and Perl code
+into Ruby, and I am also quite convinced, that this set should be an inevitable help for every newcomer,
+who plans to use Ming library and Ming/Ruby wrapper. Every script has it's authorship notes and
+the list of authors goes as follows:
+
+_ Brinkster PHP/Ming page: http:/www.gazbming.com
+_ Kumamushi Ming/Ruby examples: http://kumamushi.org/~k/ming/examples/examples.html
+_ Peter Liscovius page: http://peter.liscovius.de/swf/ming/examples
+_ Kirupa Ming examples: http://www.kirupa.com
+_ Redhot Pepper page: http://redhot.pepper.jp/ming_php/index.html
+_ Opaque net: http://ming.soureforge.net/examples/index.html
+
++ few extra examples from a Joey Lott and Sham Bhangal books and also a lot's of examples coming from
+actual Ming distribution.
+
+ Pawel

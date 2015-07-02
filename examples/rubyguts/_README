@@ -1,0 +1,26 @@
+In railsconnection folder there is an example of direct swf output method using rails framework,
+index.rhtml should be placed in rails app/view/something folder while cgi script goes to public/swf.
+Additionally we have to set following options for Apache:
+
+Listen 8009
+<VirtualHost www.alfa.com:8009>
+  ServerName rails
+  DocumentRoot /var/www/rails/public
+  ErrorLog /var/www/rails/log/server.log
+  ScriptAlias /cgi-bin /var/www/rails
+  <Directory /var/www/rails>
+    Options +ExecCGI FollowSymLinks
+    AllowOverride All
+    Allow from all
+    Order allow,deny
+  </Directory>
+</VirtualHost>
+
+
+Name of the host and port are just arbitrary, important is +ExecCGI option and .cgi file extension
+for our ruby script. It works nice for Apache 1 + Ruby 1.8.6 + Ming-0.4beta3, but it should be working
+also with other combinations (Apache2, newer Ming's, etc...). This example does not needs mod_ruby.
+
+
+In midnightcommander folder I've put a MC syntax colorizer file for ruby programming language, with some
+Ming objects and methods support. Please note, that this is a work in progress... 

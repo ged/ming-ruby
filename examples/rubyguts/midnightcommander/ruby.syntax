@@ -1,0 +1,747 @@
+#Ruby syntax file derived from perl syntax by Marco Ciampa <ciampix@libero.it>
+#alpha version 0.2 16/05/2003
+#Rewritten for ming-ruby by Pawel Karwowski <pkarwow@fastmail.fm> version 0.2+(ming-ruby)  29.12.2007
+context default
+    keyword whole linestart #!\[\s\]/\[abcdefghijklmnopqrstuvwxyz\]/\[abcdefghijklmnopqrstuvwxyz\]/\[abcdefghijklmnopqrstuvwxyz\]/\[abcdefghijklmnopqrstuvwxyz\]/bin/ruby brightred black
+    keyword whole linestart #!\[\s\]/\[abcdefghijklmnopqrstuvwxyz\]/\[abcdefghijklmnopqrstuvwxyz\]/\[abcdefghijklmnopqrstuvwxyz\]/bin/ruby brightred black
+    keyword whole linestart #!\[\s\]/\[abcdefghijklmnopqrstuvwxyz\]/\[abcdefghijklmnopqrstuvwxyz\]/bin/ruby brightred black
+    keyword whole linestart #!\[\s\]/\[abcdefghijklmnopqrstuvwxyz\]/bin/ruby brightred black
+    keyword whole linestart #!\[\s\]/bin/ruby red white
+
+    
+
+    keyword > yellow
+    keyword < yellow
+    keyword - yellow
+    keyword \+ yellow
+    keyword \* yellow
+    keyword / yellow
+    keyword % yellow
+    keyword = yellow
+    keyword \+= yellow
+    keyword -= yellow
+    keyword == yellow
+    keyword != yellow
+    keyword === yellow
+    keyword <=> yellow
+    keyword ! yellow
+    keyword ~ yellow
+    keyword =~ yellow
+    keyword & yellow
+    keyword | yellow
+    keyword .. yellow
+    keyword whole ge yellow
+    keyword whole le yellow
+    keyword whole gt yellow
+    keyword whole lt yellow
+    keyword whole eq yellow
+    keyword whole ne yellow
+    keyword whole cmp yellow
+    keyword ~ yellow
+
+#Braces & 
+
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword , brightcyan
+    keyword . brightcyan
+    keyword : brightcyan
+    keyword ; brightcyan
+  	
+    keyword whole false brightcyan
+    keyword whole FALSE brightcyan
+    keyword whole nil brightcyan
+    keyword whole NIL brightcyan
+    keyword whole true brightcyan
+    keyword whole TRUE brightcyan
+	
+	
+    keyword $\{!@&\+`'=~/\\,.;<>_\*"$:F?\} red
+    keyword $\{\0123456789\} red
+    keyword $-+ red
+
+    keyword whole $defout red
+    keyword whole $DEBUG red
+    keyword whole $F red
+    keyword whole $FILENAME red
+    keyword whole $LOAD_PATH red
+    keyword whole $SAFE red
+    keyword whole $VERBOSE red
+    keyword whole __FILE__ red
+    keyword whole __LINE__ red
+    keyword whole BEGIN red
+    keyword whole END red
+    keyword whole RUBY_PLATFORM red
+    keyword whole RUBY_RELEASE_DATE red
+    keyword whole RUBY_VERSION red
+    keyword whole $stdin red
+    keyword whole STDIN red
+    keyword whole $stdout red
+    keyword whole STDOUT red
+    keyword whole $stderr red
+    keyword whole STDERR red
+    keyword whole argv red
+    keyword whole ARGV red
+    keyword whole ARGF red
+    keyword whole env red
+    keyword whole ENV red
+	
+	
+    keyword & white
+    keyword wholeright $+ brightgreen/PaleGreen
+    keyword wholeright %+ brightcyan
+    keyword wholeright @+ white
+    keyword \\" brightred
+    keyword \\' brightred
+
+#Class IO
+
+    keyword whole close yellow
+    keyword whole crypt yellow
+    keyword whole delete yellow
+
+    keyword whole gets yellow
+    keyword whole grep yellow
+    keyword whole inspect yellow
+    keyword whole join yellow
+    keyword whole sync yellow
+
+#Class Array
+
+    keyword whole Array white
+    keyword whole index yellow
+    keyword whole indexes yellow
+    keyword whole indices yellow
+    keyword whole size yellow
+    keyword whole pop yellow
+    keyword whole push yellow
+    keyword whole sort yellow
+    keyword whole shift yellow
+    keyword whole unshift yellow
+
+#Math module
+
+    keyword whole Math::PI yellow
+    keyword whole Math::E yellow
+    keyword whole PI yellow
+    keyword whole E yellow
+    keyword whole atan2 yellow
+    keyword whole cos yellow
+    keyword whole exp yellow
+    keyword whole frexp yellow
+    keyword whole ldexp yellow
+    keyword whole log yellow
+    keyword whole log10 yellow
+    keyword whole sin yellow
+    keyword whole sqrt yellow
+    keyword whole tan yellow
+
+#Kernel module
+
+    keyword whole chomp yellow
+    keyword whole chomp! yellow
+    keyword whole chop yellow
+    keyword whole chop! yellow
+    keyword whole raise yellow
+    keyword whole fork yellow
+    keyword whole rand yellow
+    keyword whole srand yellow
+    keyword whole open yellow
+    keyword whole print yellow
+    keyword whole printf yellow
+    keyword whole sprintf yellow
+    keyword whole exec yellow
+    keyword whole eval yellow
+    keyword whole exit yellow
+    keyword whole sleep yellow	
+    
+# ObjectSpace module
+
+    keyword whole ObjectSpace white
+    keyword whole each_object yellow
+    keyword whole object_id yellow    
+	
+	
+	
+    keyword whole and brightcyan
+    keyword whole or brightcyan
+    keyword whole not brightcyan
+    keyword whole do brightcyan
+    keyword whole if brightcyan
+    keyword whole until brightcyan
+    keyword whole elsif brightcyan
+    keyword whole else brightcyan
+    keyword whole unless brightcyan
+    keyword whole while brightcyan
+    keyword whole each brightcyan
+    keyword whole foreach brightcyan
+    keyword whole for brightcyan
+    keyword whole in brightcyan    
+    keyword whole goto brightcyan
+    keyword whole last brightcyan
+    keyword whole next brightcyan
+    keyword whole caller brightcyan
+    keyword whole import brightcyan
+    keyword whole package brightcyan
+    
+    keyword whole require brightcyan
+    keyword whole include brightcyan
+    
+    keyword whole return brightcyan
+    keyword whole untie brightcyan
+    keyword whole use brightcyan
+
+    keyword whole integer brightcyan
+    keyword whole less brightcyan
+ 
+    
+    keyword whole nil brightcyan
+    keyword whole step brightcyan    
+    keyword whole upto brightcyan
+    keyword whole downto brightcyan
+    keyword whole times brightcyan
+    keyword whole readlines brightcyan    
+    keyword whole | brightcyan 
+    
+
+    keyword whole abs yellow
+    keyword whole atan2 yellow
+    keyword whole cos yellow
+    keyword whole exp yellow
+    keyword whole int yellow
+    keyword whole log yellow
+    keyword whole rand yellow
+    keyword whole sin yellow
+    keyword whole sqrt yellow
+    keyword whole srand yellow
+    keyword whole time yellow
+    keyword whole chr yellow
+    keyword whole gmtime yellow
+    keyword whole hex yellow
+    keyword whole localtime yellow
+    keyword whole oct yellow
+    keyword whole ord yellow
+    keyword whole vec yellow
+    keyword whole pack yellow
+    keyword whole unpack yellow
+
+    keyword whole chomp yellow/YellowGreen
+    keyword whole chop yellow/YellowGreen
+    keyword whole crypt yellow/YellowGreen
+    keyword whole eval yellow/YellowGreen
+    keyword whole index yellow/YellowGreen
+    keyword whole length yellow/YellowGreen
+    keyword whole lc yellow/YellowGreen
+    keyword whole lcfirst yellow/YellowGreen
+    keyword whole quotemeta yellow/YellowGreen
+    keyword whole rindex yellow/YellowGreen
+    keyword whole substr yellow/YellowGreen
+    keyword whole uc yellow/YellowGreen
+    keyword whole ucfirst yellow/YellowGreen
+
+    keyword whole delete yellow
+    keyword whole each yellow
+    keyword whole exists yellow
+    keyword whole grep yellow
+    keyword whole join yellow
+    keyword whole keys yellow
+    keyword whole map yellow
+    keyword whole pop yellow
+    keyword whole push yellow
+    keyword whole reverse yellow
+    keyword whole scalar yellow
+    keyword whole shift yellow
+    keyword whole sort yellow
+    keyword whole splice yellow
+    keyword whole split yellow
+    keyword whole unshift yellow
+    keyword whole values yellow
+
+    keyword whole chmod yellow
+    keyword whole chown yellow
+    keyword whole truncate yellow
+    keyword whole link yellow
+    keyword whole lstat yellow
+    keyword whole mkdir yellow
+    keyword whole readlink yellow
+    keyword whole rename yellow
+    keyword whole rmdir yellow
+    keyword whole stat yellow
+    keyword whole symlink yellow
+    keyword whole unlink yellow
+    keyword whole utime yellow
+
+    keyword whole binmade yellow
+    keyword whole close yellow
+    keyword whole dbmclose yellow
+    keyword whole dbmopen yellow
+    keyword whole binmade yellow
+    keyword whole eof yellow
+    keyword whole fcntl yellow
+    keyword whole fileno yellow
+    keyword whole flock yellow
+    keyword whole getc yellow
+    keyword whole ioctl yellow
+    keyword whole open yellow
+    keyword whole pipe yellow
+    keyword whole print yellow
+    keyword whole printf yellow
+    keyword whole read yellow
+    keyword whole seek yellow
+    keyword whole select yellow
+    keyword whole sprintf yellow
+    keyword whole sysopen yellow
+    keyword whole sysread yellow
+    keyword whole syswrite yellow
+    keyword whole tell yellow
+
+    keyword whole formline yellow
+    keyword whole write yellow
+
+    keyword whole closedir yellow
+    keyword whole opendir yellow
+    keyword whole readdir yellow
+    keyword whole rewinddir yellow
+    keyword whole seekdir yellow
+    keyword whole telldir yellow
+
+    keyword whole alarm yellow
+    keyword whole chdir yellow
+    keyword whole chroot yellow
+    keyword whole die yellow
+    keyword whole exec yellow
+    keyword whole exit yellow
+    keyword whole fork yellow
+    keyword whole getlogin yellow
+    keyword whole getpgrp yellow
+    keyword whole getppid yellow
+    keyword whole getpriority yellow
+    keyword whole glob yellow
+    keyword whole kill yellow
+    keyword whole setpgrp yellow
+    keyword whole setpriority yellow
+    keyword whole sleep yellow
+    keyword whole syscall yellow
+    keyword whole system yellow
+
+    keyword whole umask yellow
+    keyword whole wait yellow
+    keyword whole waitpid yellow
+    keyword whole warn yellow
+
+    keyword whole accept yellow
+    keyword whole bind yellow
+    keyword whole connect yellow
+    keyword whole getpeername yellow
+    keyword whole getsockname yellow
+    keyword whole getsockopt yellow
+    keyword whole listen yellow
+    keyword whole recv yellow
+    keyword whole send yellow
+    keyword whole setsockopt yellow
+    keyword whole shutdown yellow
+    keyword whole socket yellow
+    keyword whole socketpair yellow
+
+
+    keyword whole defined yellow
+    keyword whole dump yellow
+    keyword whole eval yellow
+    keyword whole local yellow
+    keyword whole my yellow
+    keyword whole ref yellow
+    keyword whole reset yellow
+    keyword whole scalar yellow
+    keyword whole undef yellow
+    keyword whole wantarray yellow
+
+    
+    keyword whole notify_observers yellow
+    keyword whole changed yellow
+    
+    keyword whole def brightcyan
+    keyword whole yield yellow
+    keyword whole puts yellow
+    keyword whole raise yellow
+    keyword whole class white
+    keyword whole module white
+    keyword whole private brightcyan
+    keyword whole public brightcyan
+    keyword whole __FILE__ white
+    keyword whole __LINE__ white
+    
+    keyword whole super yellow
+    keyword whole case yellow
+    keyword whole when yellow
+    
+# Ming stuff starts
+	
+    keyword whole use_SWF_version brightred
+    keyword whole Ming brightred    
+    keyword whole set_scale brightred
+    keyword whole save brightred
+    keyword whole output brightred      
+    keyword whole begin brightred
+    keyword whole end brightred
+    keyword whole BEGIN brightred
+    keyword whole END brightred    
+    
+
+
+# Ming classes
+
+    keyword whole new white
+    keyword whole SWFAction white
+    keyword whole SWFBitmap white
+    keyword whole SWFBlendMode white    
+    keyword whole SWFBlur white
+    keyword whole SWFBrowserFont white    
+    keyword whole SWFButton white
+    keyword whole SWFButtonRecord white
+    keyword whole SWFCharacter white   
+    keyword whole SWFColor white
+    keyword whole SWFCXform white
+    keyword whole SWFDisplayItem white
+    keyword whole SWFFill white
+    keyword whole SWFFillStyle white
+    keyword whole SWFFilter white
+    keyword whole SWFFilterMatrix white    
+    keyword whole SWFFont white
+    keyword whole SWFFontCharacter white    
+    keyword whole SWFGradient white
+    keyword whole SWFLineStyle white    
+    keyword whole SWFMatrix white
+    keyword whole SWFMorph white                    
+    keyword whole SWFShape white
+    keyword whole SWFMovie white
+    keyword whole SWFMovieClip white
+    keyword whole SWFPosition white
+    keyword whole SWFPrebuiltClip white
+    keyword whole SWFShadow white    
+    keyword whole SWFSprite white
+    keyword whole SWFShape white
+    keyword whole SWFSound white
+    keyword whole SWFSoundInstance white    
+    keyword whole SWFSoundStream white
+    keyword whole SWFText white    
+    keyword whole SWFTextField white
+    keyword whole SWFVideoStream white    
+
+# Ming modules
+
+    keyword whole SWFMing_T_Scrollbar white
+
+
+# Ming flags
+
+# Button flags
+    
+    keyword whole UP brightmagenta
+    keyword whole HIT brightmagenta    
+    keyword whole OVER brightmagenta
+    keyword whole DOWN brightmagenta
+    keyword whole MOUSE_UP brightmagenta 
+    keyword whole MOUSE_UP_OUTSIDE brightmagenta     
+    keyword whole MOUSE_DOWN brightmagenta
+    keyword whole MOUSE_OVER brightmagenta    
+    keyword whole MOUSE_OUT brightmagenta
+    keyword whole DRAG_OVER brightmagenta    
+    keyword whole DRAG_OUT brightmagenta    
+    keyword whole MOUSE_UP_OUTSIDE brightmagenta
+    keyword whole IDLE_TO_OVER_DOWN brightmagenta
+    keyword whole OUT_DOWN_TO_IDLE brightmagenta
+    keyword whole OUT_DOWN_TO_OVER_DOWN brightmagenta
+    keyword whole OUT_DOWN_TO_OVER_UP brightmagenta
+    keyword whole OUT_DOWN_TO_OUT_DOWN brightmagenta
+    keyword whole OUT_DOWN_TO_OUT_UP brightmagenta
+    keyword whole OVER_UP_TO_IDLE brightmagenta
+    keyword whole IDLE_TO_OVER_UP brightmagenta    
+
+#Fill flags
+
+    keyword whole SOLID brightmagenta
+    keyword whole GRADIENT brightmagenta
+    keyword whole RADIAL_GRADIENT brightmagenta
+    keyword whole LINEAR_GRADIENT brightmagenta
+    keyword whole FOCAL_GRADIENT brightmagenta
+    keyword whole BITMAP brightmagenta
+    keyword whole TILED_BITMAP brightmagenta    
+    keyword whole CLIPPED_BITMAP brightmagenta
+    keyword whole NON_SMOOTHED_TILED_BITMAP brightmagenta    
+    keyword whole NON_SMOOTHED_CLIPPED_BITMAP brightmagenta    
+
+#Gradient flags
+    
+    keyword whole REPEAT brightmagenta
+    keyword whole REFLECT brightmagenta    
+    keyword whole PAD brightmagenta
+    keyword whole NORMAL brightmagenta    
+    keyword whole LINEAR brightmagenta    
+
+
+#Filter flags
+    
+    keyword whole MODE_INNER brightmagenta
+    keyword whole MODE_KO brightmagenta    
+    keyword whole MODE_COMPOSITE brightmagenta
+    keyword whole MODE_ONTOP brightmagenta
+    keyword whole FLAG_CLAMP brightmagenta    
+    keyword whole FLAG_PRESERVE_ALPHA brightmagenta 
+
+#Shape flags
+    
+    keyword whole SHAPE3 brightmagenta
+    keyword whole SHAPE4 brightmagenta
+    keyword whole USE_SCALING_STROKES brightmagenta
+    keyword whole USE_NON_SCALING_STROKES brightmagenta
+
+#Linestyle flags
+    
+    keyword whole CAP_ROUND brightmagenta
+    keyword whole CAP_NONE brightmagenta    
+    keyword whole CAP_SQUARE brightmagenta
+    keyword whole JOIN_ROUND brightmagenta    
+    keyword whole JOIN_BEVEL brightmagenta
+    keyword whole JOIN_MITER brightmagenta    
+    keyword whole FLAG_NOHSCALE brightmagenta
+    keyword whole FLAG_NOVSCALE brightmagenta    
+    keyword whole FLAG_HINTING brightmagenta
+    keyword whole FLAG_NOCLOSE brightmagenta
+    keyword whole FLAG_ENDCAP_ROUND brightmagenta
+    keyword whole FLAG_ENDCAP_NONE brightmagenta    
+    keyword whole FLAG_ENDCAP_SQUARE brightmagenta    
+
+#Textfield flags
+
+    keyword whole HAS_FONT brightmagenta
+    keyword whole HAS_LENGHT brightmagenta
+    keyword whole HAS_COLOR brightmagenta
+    keyword whole NO_EDIT brightmagenta
+    keyword whole PASSWORD brightmagenta
+    keyword whole WORDWRAP brightmagenta    
+    keyword whole MULTILINE brightmagenta
+    keyword whole HAS_TEXT brightmagenta
+    keyword whole USE_FONT brightmagenta
+    keyword whole HTML brightmagenta
+    keyword whole DRAW_BOX brightmagenta
+    keyword whole NO_SELECT brightmagenta    
+    keyword whole HAS_LAYOUT brightmagenta    
+    keyword whole AUTO_SIZE brightmagenta
+
+
+    keyword whole ALIGN_CENTER brightmagenta
+    keyword whole ALIGN_LEFT brightmagenta    
+    keyword whole ALIGN_RIGHT brightmagenta
+    keyword whole ALIGN_JUSTIFY brightmagenta
+
+#Action flags
+
+    keyword whole DATA brightmagenta
+    keyword whole ON_LOAD brightmagenta
+    keyword whole UN_LOAD brightmagenta    
+    keyword whole ENTER_FRAME brightmagenta
+    keyword whole KEY_UP brightmagenta
+    keyword whole KEY_DOWN brightmagenta
+    keyword whole MOUSE_MOVE brightmagenta
+    keyword whole MOUSE_UP brightmagenta    
+    keyword whole MOUSE_DOWN brightmagenta
+    keyword whole CONSTRUCT brightmagenta
+    keyword whole RELEASE brightmagenta
+    keyword whole RELEASE_OUTSIDE brightmagenta    
+    keyword whole PRESS brightmagenta
+    keyword whole INIT brightmagenta
+    keyword whole ROLL_OVER brightmagenta    
+    keyword whole ROLL_OUT brightmagenta
+    keyword whole DRAG_OVER brightmagenta    
+    keyword whole DRAG_OUT brightmagenta    
+    keyword whole KEY_PRESS brightmagenta
+
+#Blendmode flags
+
+    keyword whole NULL brightmagenta
+    keyword whole NORMAL brightmagenta
+    keyword whole LAYER brightmagenta    
+    keyword whole MULT brightmagenta
+    keyword whole SCREEN brightmagenta
+    keyword whole LIGHTEN brightmagenta    
+    keyword whole DARKEN brightmagenta
+    keyword whole DIFF brightmagenta
+    keyword whole ADD brightmagenta    
+    keyword whole SUB brightmagenta
+    keyword whole INV brightmagenta    
+    keyword whole ALPHA brightmagenta
+    keyword whole ERASE brightmagenta
+    keyword whole OVER_LAY brightmagenta    
+    keyword whole HARD_LIGHT brightmagenta
+
+#Sound flags
+
+    keyword whole COMPRESSION brightmagenta    
+    keyword whole NOT_COMPRESSED brightmagenta
+    keyword whole ADPCM_COMPRESSED brightmagenta    
+    keyword whole MP3_COMPRESSED brightmagenta
+    keyword whole NOT_COMPRESSED_LE brightmagenta
+    keyword whole NELLY_COMPRESSED brightmagenta
+    keyword whole RATE brightmagenta
+    keyword whole KHZ_5 brightmagenta
+    keyword whole KHZ_11 brightmagenta    
+    keyword whole KHZ_22 brightmagenta
+    keyword whole KHZ_44 brightmagenta
+    keyword whole BITS brightmagenta
+    keyword whole BITS_8 brightmagenta
+    keyword whole BITS_16 brightmagenta    
+    keyword whole CHANNELS brightmagenta
+    keyword whole MONO brightmagenta    
+    keyword whole STEREO brightmagenta
+    
+#VideoStream flags
+
+    keyword whole MODE_AUTO brightmagenta
+    keyword whole MODE_MANUAL brightmagenta
+    keyword whole SEEK_SET brightmagenta
+    keyword whole SEEK_END brightmagenta
+    keyword whole SEEK_CUR brightmagenta    
+
+
+
+
+# Ming methods
+    
+    keyword whole loop yellow
+    keyword whole add_fill yellow
+    keyword whole add_shape yellow 
+    keyword whole add_character yellow     
+    keyword whole add_string yellow
+    keyword whole add_entry yellow    
+    keyword whole add_action yellow
+    keyword whole add_color yellow
+    keyword whole add_frame yellow
+    keyword whole set_right_fill yellow
+    keyword whole set_left_fill yellow 
+    keyword whole set_right_fill_style yellow
+    keyword whole set_left_fill_style yellow
+    keyword whole set_ratio yellow
+    keyword whole set_up yellow    
+    keyword whole set_down yellow
+    keyword whole set_over yellow
+    keyword whole set_hit yellow
+    keyword whole move_pen_to yellow
+    keyword whole move_pen yellow    
+    keyword whole move_to yellow        
+    keyword whole draw_line_to yellow
+    keyword whole draw_line yellow
+    keyword whole draw_glyph yellow
+    keyword whole draw_curve_to yellow
+    keyword whole set_mask_level yellow    
+    keyword whole get_shape1 yellow        
+    keyword whole get_shape2 yellow
+    keyword whole get_width yellow
+    keyword whole get_height yellow
+    keyword whole get_ascent yellow
+    keyword whole next_frame yellow    
+    keyword whole scale_to yellow
+    keyword whole set_background yellow        
+    keyword whole set_depth yellow    
+    keyword whole set_dimension yellow    
+    keyword whole set_rate yellow
+    keyword whole set_name yellow
+    keyword whole set_font yellow    
+    keyword whole set_height yellow 
+    keyword whole add_chars yellow     
+    keyword whole set_bounds yellow    
+    keyword whole set_alignment yellow
+    keyword whole set_line yellow
+    keyword whole set_line_2 yellow    
+    keyword whole set_color yellow
+    keyword whole set_spread_mode yellow
+    keyword whole set_interpolation_mode yellow
+    keyword whole set_focal_point yellow
+    keyword whole use_version yellow    
+    keyword whole add yellow
+    keyword whole add_font yellow
+    keyword whole add_all_chars yellow    
+    keyword whole rotate yellow
+    keyword whole rotate_to yellow    
+    keyword whole scale yellow
+    keyword whole remove yellow
+    keyword whole draw_circle yellow
+    keyword whole mult_color yellow
+    keyword whole set_matrix yellow
+    keyword whole skew_x_to yellow
+    keyword whole skew_y_to yellow
+    keyword whole label_frame yellow
+    keyword whole add_export yellow
+    keyword whole write_exports yellow
+    keyword whole assign_symbol yellow
+    keyword whole set_blend_mode yellow
+    keyword whole add_filter yellow
+    keyword whole named_anchor yellow
+    keyword whole get_matrix yellow
+    keyword whole get_scale_x yellow    
+    keyword whole get_scale_y yellow
+    keyword whole get_rotate_0 yellow
+    keyword whole get_rotate_1 yellow
+    keyword whole get_translate_x yellow
+    keyword whole get_translate_y yellow
+    keyword whole set_network_access yellow
+    keyword whole set_script_limits yellow
+    keyword whole set_tab_index yellow
+    keyword whole fill_from_fillstyle yellow
+    keyword whole position_from_matrix yellow
+    keyword whole protect yellow
+    keyword whole add_metadata yellow
+    keyword whole define_scene yellow
+    keyword whole add_init_action yellow
+    keyword whole set_line_style yellow
+    keyword whole set_line_style_2 yellow    
+    
+    keyword whole start_sound red
+    keyword whole stop_sound red    
+    keyword whole add_sound red    
+    keyword whole set_loop_count red
+    keyword whole set_loop_out_point red
+    keyword whole set_loop_in_point red
+    keyword whole set_no_multiple red
+    keyword whole set_sound_stream red
+    keyword whole set_number_of_frames red
+    keyword whole get_num_frames red 
+    keyword whole get_frames red     
+
+
+    keyword whole set_blur_filter brightcyan
+    keyword whole set_gradient_glow_filter brightcyan
+    keyword whole set_gradient_bevel_filter brightcyan
+    keyword whole set_drop_shadow_filter brightcyan 
+    keyword whole set_glow_filter brightcyan
+    keyword whole set_bevel_filter brightcyan
+    keyword whole set_color_matrix_filter brightcyan    
+    keyword whole set_convolution_filter brightcyan
+
+
+context exclusive whole <\[\s\\\]EOF EOF green
+context # \n  black
+    spellcheck
+context linestart = =cut brown
+context " " green
+    keyword \\" brightgreen
+    keyword \\\\ brightgreen
+    keyword \\' green
+    keyword \\\\ green
+    
+context ' ' brightgreen    
+
+keyword whole ming/ming brightred
+
+context whole __END__ guacomale_pudding brown
+
+context linestart sub\{\s\t\} \n
+    keyword whole sub yellow
+    keyword (*) cyan
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword ; brightcyan
+

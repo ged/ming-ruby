@@ -1,0 +1,26 @@
+A ) In order to get High Definition movies to be working you have to:
+
+
+  1) Go to the address http://code.google.com/p/rubyizumi and download RubyIZUMI rtmp server.
+
+  2) Go to the address http://www.adobe.com/devnet/flashplayer/articles/hd_video_flash_player.html
+     and download h264_as3_samples.zip file
+
+  3) Unzip this file and copy mp4 file named backcountry_bombshells_4min_HD_H264.mp4 to the rtmp
+     base folder (for example /opt/movies)
+
+  4) Start rtmp server using ruby server.rb /opt/movies command
+
+  5) Click on the rubyizumi.rb file and copy generated rubyizumi.swf to the destination folder in Apache
+     root directory. Versions 9.0.115 and 9.0.124 of the flash player are confirmed to be working well!
+
+
+
+B) In order to get videoconferencing working: 
+
+  1) Download and install haxevideo rtmp server first.
+
+  2) Plug the camera in.
+
+  3) Generate haxevideo*.swf files and open them up in different windows. You can record and replay
+     previously recorded files but also make a live video streaming.

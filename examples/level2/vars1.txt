@@ -1,0 +1,1 @@
+vars1.txt=&var1=40&var2=80&var3=70&var4=80&var5=10&loaded=1

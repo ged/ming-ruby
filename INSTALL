@@ -1,0 +1,158 @@
+Please read the README file first. :-)
+Wiki page must have also useful information to install Ming/Ruby.
+  http://mingruby.rubyforge.org/wiki/wiki.pl?Installation_Guide
+
+Basic Installation
+==================
+
+  Before installing Ming/Ruby, you needs to install the following
+  tools:
+
+    * Ming 0.4rc1
+    * ruby 1.8.x
+
+  (I guess Ming must be compiled as a static linked library, however,
+  you may use a dynamic library ???)
+
+  Quick start
+  -----------
+
+    First, 'cd' to the directory containing the package's source code
+    and then use 'setup.rb' to do all configure/setup/install
+    procedure as follows.
+
+    The 'setup.rb' script in this package is the installer of Ming/Ruby.
+    Let's type this (You might needs the super user privilege)
+      ($ su)
+       # ruby setup.rb
+
+    For MacOSX, otherwise you have to type the following:
+       $ sudo ruby setup.rb
+
+    On the other hand, if you want to install a program to your home
+    directory, you can type following instead:
+       $ ruby setup.rb all -- --prefix=$HOME
+
+    If 'setup.rb' cannot find the directory of Ming, you can tell the
+    directory explicitly using the following options:
+
+       --with-ming-include=DIR
+          C header files for Ming in DIR
+       --with-ming-lib=DIR
+          object code libraries for Ming in DIR
+       --with-ming-dir=PREFIX
+          use PREFIX as
+             PREFIX/include ... C header files for Ming
+             PREFIX/lib     ... object code libraries for Ming
+
+    Note that you have to add '--' symbols into the arguments
+    because of some technical reasons, as like,
+       $ ruby setup.rb -- --with-ming-dir=/usr/local
+
+    For 'libpng', 'libungif', 'libfreetype' and 'libz', the same features are provided.
+
+Detailed Installation Process
+=============================
+
+  Please refer to the original page.
+    http://www.loveruby.net/en/man/setup/
+
+  The following option lists for 'setup.rb' is quoted from the
+  original documents.
+
+  Global Options
+  --------------
+    
+  "Global Option" is a command line option which you can use
+  for all tasks.  You must give a global option before any task
+  name.
+    
+    -q,--quiet
+        suppress message outputs
+    --verbose
+        output messages verbosely (default)
+    -h,--help
+        prints help and quit
+    -v,--version
+        prints version and quit
+    --copyright
+        prints copyright and quit
+    
+  Tasks
+  -----
+  These are acceptable tasks:
+    all
+        Invokes `config', `setup', then `install'.
+        Task options for all is same with config.
+    config
+        Checks and saves configurations.
+    show
+        Prints current configurations.
+    setup
+        Compiles ruby extentions.
+    install
+        Installs files.
+    clean
+        Removes created files.
+    distclean
+        Removes all created files.
+    
+  Task Options for CONFIG/ALL
+  ---------------------------
+    
+    --prefix=PATH
+        a prefix of the installing directory path
+    --stdruby=PATH
+        the directory for standard ruby libraries
+    --siterubycommon=PATH
+        the directory for version-independent non-standard
+        ruby libraries
+    --siteruby=PATH
+        the directory for non-standard ruby libraries
+    --bindir=PATH
+        the directory for commands
+    --rbdir=PATH
+        the directory for ruby scripts
+    --sodir=PATH
+        the directory for ruby extentions
+    --datadir=PATH
+        the directory for shared data
+    --rubypath=PATH
+        path to set to #! line
+    --rubyprog=PATH
+        the ruby program using for installation
+    --makeprog=NAME
+        the make program to compile ruby extentions
+    --without-ext
+        forces to setup.rb never to compile/install
+        ruby extentions.
+    --rbconfig=PATH
+        your rbconfig.rb to load
+    
+  You can view default values of these options by typing
+
+      $ ruby setup.rb --help
+
+    
+  If there's the directory named "packages",
+  You can also use these options:
+    --with=NAME,NAME,NAME...
+        Package names which you want to install.
+    --without=NAME,NAME,NAME...
+        Package names which you do not want to install.
+    
+  [NOTE] You can pass options for extconf.rb like this:
+
+      ruby setup.rb config -- --with-tklib=/usr/lib/libtk-ja.so.8.0
+
+    
+  Task Options for INSTALL
+  ------------------------
+    
+    --no-harm
+        prints what to do and done nothing really.
+    --prefix=PATH
+        The prefix of the installing directory path.
+        This option may help binary package maintainers.
+        A default value is an empty string.
+  

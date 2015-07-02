@@ -1,0 +1,10 @@
+<collisionMovieData>
+  <bounceArea width='200' height='200' />
+  <circles>
+    <circle radius='15' vel='random' col='random' />
+    <circle radius='12' vel='random' col='random' />
+    <circle radius='8' vel='random' col='random' />
+    <circle radius='10' vel='random' col='random' />
+    <circle radius='11' vel='random' col='random' />    
+  </circles>
+</collisionMovieData>  

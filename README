@@ -1,0 +1,37 @@
+Ming/Ruby -- ruby library for generating Adobe Flash (SWF)
+             based on Ming
+
+
+Contributors:
+  * IKEGAMI Daisuke <ikegami at madscientist dot jp>
+  * Carson Macdonald
+  * Richard Fairhurst
+  * Kazuki Sakamoto
+  * Pawel Karwowski
+
+ 
+Short description:
+'Ming/Ruby' is a ruby extension library for generating Adobe
+Flash (SWF). It is a wrapper for Ming [0] which is a C library for
+the same purpose. See directory 'doc/' for details.
+
+License: 
+License of Ming/Ruby is LGPL because one of Ming is LGPL.
+'setup.rb' is an installer tool which is written by Minero Aoki.
+License of 'setup.rb' is also LGPL.
+
+Requires:
+
+  * ruby 1.8.x     [1]
+  * Ming 0.4rc1    [0]
+  * libfreetype
+  * libpng
+  * libungif
+  * libz
+
+setup.rb is included this Ming/Ruby package.
+
+References
+[0] - http://ming.sourceforge.net/
+[1] - http://www.ruby-lang.org/
+[2] - http://www.loveruby.net/en/man/setup/

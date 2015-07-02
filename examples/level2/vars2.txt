@@ -1,0 +1,2 @@
+vars1.txt=&var1=90&var2=80&var3=70&var4=80&var5=10&loaded=1
+vars1.txt=&var1=60&var2=50&var3=40&var4=20&var5=50&loaded=1

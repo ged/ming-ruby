@@ -1,0 +1,455 @@
+2008-09-27 19:28 baribal
+* Added excellent examples by Peter Liscovius
+* New SWFInitAction class examples for movieclips
+* SWFAction - added set_debug method (use on action instance: @action.set_debug)
+2008-09-26 21:48 baribal
+* Added SWFInitAction and SWFBinaryData classes
+* SWFMovieClip - added add_init_action method
+* Added examples for SWFInitAction class
+* Fixed gradient examples
+2008-09-25 22:30 baribal 
+* SWFVideoStream - added methods: set_frame_mode, next_frame and seek, added flags
+* SWFMovie - added get_rate method
+* SWFSoundStream - added get_duration method
+* SWFFillStyle - fixed memory management
+* Added new examples documenting newly added methods
+2008-07-06 11:55 baribal
+* Added rtmp folder and examples for rtmp HD and live video streaming with RubyIZUMI and haxevideo rtpm servers.
+* Updated NEWS, README and Changelog files.
+2008-07-05 23:55 baribal
+* SWFSound - fixed memory management
+* SWFDisplayItem - fixed float -> double in functions: getRotation, getScale, getScew and getPosition
+* SWFShape - fixed float -> double in function getPen
+* SWFSoundStream - changed function name into get_duration
+2008--3-23 22:02 baribal
+* SWFTextField - removal of duplicate function. Adding alias set_name for set_variable_name
+2008-03-15 12:10 baribal
+* SWFDisplayItem - removal of duplicate functions
+* SWFMovieClip - added method set_sound_stream_at
+* SWFVideoStream - added alias get_frames to get_num_frames method (consistency with SWFSoundStream get_frames)
+* Updated onclipevent.rb, stream_mp3.rb and video.rb examples
+2008-03-09 18:15 baribal
+* SWFAction - removal of _free_ method, setting -1 parameter for Data_Wrap_Struct. Following PHP wrapper solution, is taken for granted, that destruction of SWFAction objects handles internally ming lib (anyway destroySWFAction method is set both in action.h and ming.h files, bug ??)
+* SWFBitmap, SWFBlur, SWFFilterMatrix, SWFShadow - removal of unneeded _mark_ method
+* SWFFilter - added init_references call to all filters
+* SWFDisplayItem - added add_references call to all methods, that need it
+2008-03-02 10:03 baribal
+* SWFButton, SWFMovie, SWFMovieClip, SWFPosition, SWFDisplayItem - added parameter -1 for Data_Wrap_Struct calls giving SWFSoundInstance, SWFCharacter or SWFFontCharacter objects, whose destruction is handled internally by ming
+* SWFFontCharacter - removed unnedded destructor
+2008-03-01 23:25 baribal
+* SWFShape, SWFMovie, SWFLineStyle - added destructors (assignSymbol and defineScene methods use with caution please!)
+* SWFColor - fixed constructor
+* SWFButtonRecord, SWFDisplayItem, SWFSoundInstance, SWFCharacter, SWFMatrix - removed free amd mark methods: memory management is done internally by ming
+* SWFMovie, SWFMovieClip, SWFButton - adjusted methods, that reference to RSWFButtonRecord, RSWFDisplayItem, RSWFSoundInstance and RSWFCharacter structures
+* SWFFillStyle, SWFFontCharacter, SWFSound, SWFCXform - commented out destructors, that do not work well
+* SWFDisplayItem - commented out 7 functions removed (why???) from ming-CVS
+* fixed some examples
+2008-02-24 20:15 baribal
+* SWFBlur, SWFFilterMatrix, SWFFilter, SWFShadow, SWFPosition - added destructors
+* SWFBlur, SWFColor, SWFFilterMatrix, SWFShadow - added *_mark_* method for constructors
+* SWFPrebuildClip - fixed destructor
+* SWFSound, SWFButton, SWFBitmap - fixed destructors. Added rb_mark_* methods for garbage collector use
+* SWFFillStyle, SWFGradient, SWFMovieClip, SWFMorph, SWFText, SWFBrowserFont, SWFSoundStream, SWFTextField, SWFCXform, SWFFill
+*               - uncommenting bodies of destructors - rb_free_SWF* functions, that seem to work correctly
+* SWFShape, SWFSoundInstance, SWFLineStyle - fixed some mistakes related to unsigned short macros (FIX2INT replaced with FIX2UINT)
+* SWFFont - added methods: get_glyph_count and get_name
+* Added glyph.rb and getName.rb examples
+2008-02-17 12:16 baribal
+* Updated some examples.
+2008-02-03 12:30 baribal
+* Various files - global replacement of makro STR2CSTR with macro StringValuePtr
+* SWFSound - added possibility of Sound_fromSoundStream method (works with current ming-CVS)
+* SWFSoundStream - added get_frames method (does not seems to work)
+* SWFSoundInstance - added add_envelope method (it rather does not works as well)
+* SWFBitmap - replacement of newSWFJpegWithAlpha method with newSWFJpegWithAlpha_formInput (eliminates SEGFAULT)
+* SWFSound, SWFGradient, SWFShape, SWFFilter - adjusted flags names to ming-ruby naming convention
+* Fixed SWFMing_T_Scrollbar module
+* Updated syntax colorizer file and some examples
+2008-01-27 20:14 baribal
+* SWFMovie - added methods protect, add_metadata and define_scene
+* SWFMovieClip - added method add_init_action
+* Added classes SWFLineStyle and SWFBlendMode
+* Moved LineStyle, Blendmode and Action flags to appropriate files
+* Adjusted flags names to ming-ruby naming convention
+* Updated examples and syntax colorizer files
+* MANIFEST file update
+2008-01-20 9:20 baribal
+* SWFFilter - changed filter methods names from new_(filter_name) to  set_(filter_name)
+* SWFMatrix - changed new_position method name into position_from_matrix
+* MANIFEST file update
+* Examples and syntax colorizer update.
+There is a need to keep on with naming conventions of the Ruby programming language!
+ 
+2008-01-19 18:22 baribal
+* SWFText - fixed compilation warnings in set_font method
+* SWFDisplayItem - added methods: get_character and flush (this one works with current Ming-CVS)
+* SWFFillStyle - added method fill_from_fillstyle
+* SWFFill - added flags
+* SWFButtonRecord - added set_depth method
+* Added /version8/fire.rb example documenting set_matrix and fill_from_fillstyle methods
+
+2008-01-13 14:00 baribal
+* Added class SWFFilterMatrix
+* SWFFilter - added methods new_color_matrix_filter and new_convolution_filter (works with CVS Ming since Jan 06 2008)
+* SWFVideoStream - fixed errors in variables initialization
+* SWFButton - fixed bug in set_scaling_grid method
+* SWFBitmap - commented out IF statements for Ming builds without png/gif support. Now we support full Ming builds !
+* Added examples for filters
+
+2008-01-03 11: 00 Kazuki
+
+* extconf.rb - Removed unneeded checking headers
+* swfshape.c - support SWF_SHAPE_NONSCALINGSTROKES - (for CVS Ming)
+
+2007-12-28 10:08 baribal
+
+* extconf.rb: Added freetype library for linker.Added info for users that did not compile ming with png/ungif libraries
+* Added classes: SWFSound, SWFFontCharacter, SWFButtonRecord, SWFCXform, SWFMatrix, SWFPosition, SWFBlur, SWFShadow, SWFFilter, SWFColor
+
+* SWFDisplayItem - added methods: end_mask, get_x, get_y, get_x_scale, get_y_scale, get_x_scew, get_y_scew, get_rot, cache_as_bitmap, set_blend_mode fixed bug in set_depth method, added FLAGS
+* SWFBitmap - added support for gif and png files
+* SWFButton - added methods: set_scaling_grid and remove_scaling_grid, changed deprecated method add_shape with add_character
+* SWFFill - added FLAGS
+* SWFFillStyle - added possibility for creation of fillstyles
+* SWFGradient - added methods: set_spread_mode, set_interpolation_mode,  set_focal_point + FLAGS
+* SWFMovie - added methods: named_anchor, assign_symbol, set_network_access, set_script_limits, set_tab_index
+* SWFMovieClip - added methods: set_scaling_grid, remove_scaling_grid
+* SWFShape - added methods: hide_line, set_left_fill_style, set_right_fill_style, use_version, set_line_2, removed deprecated method set_line_style, added FLAGS
+* SWFSoundInstance - fixed bug
+* SWFTextfield - fixed bug
+* SWFVideoStream - fixed bug related to creation of object with no argument given. Swf was produced, anyway with SEGFAULT error - now it is fixed; added method has_audio.
+
+* Added more examples
+
+2007-10-27 04:24 Kazuki
+
+use newSWFAction instead of deprecated compileSWFActionCode.
+use newSWFFont_fromFile instead of old loadSWFFontFromFile.
+    (newSWFFont_fromFile supports TTF fonts!)
+fix SWFText.add_UTF8_string for only string argument without advance parameter.
+
+2007-10-27 04:24 mcdonaec
+
+add SWFSoundStream (not tested yet).
+
+2006-12-17 13:56  mcdonaec
+
+	* ext/ming/mingc/swfmovie.c: Added patch from Richard Fairhurst
+	  that adds write_exports to SWFMovie.
+
+2006-12-17 13:53  mcdonaec
+
+	* ext/ming/mingc/swfprebuiltclip.c: Pawel Karwowski's patch to add
+	  swfprebuiltclip.
+
+2006-12-17 13:52  mcdonaec
+
+	* ChangeLog, NEWS, README, ext/ming/mingc/MANIFEST,
+	  ext/ming/mingc/mingc.c, ext/ming/mingc/mingc.h,
+	  ext/ming/mingc/swfbitmap.c, ext/ming/mingc/swfdisplayitem.c,
+	  ext/ming/mingc/swfshape.c, ext/ming/mingc/swftextfield.c: Added
+	  patches from Pawel Karwowski.
+
+2006-12-17 13:49  mcdonaec
+
+	* examples/: 3Dcam.rb, README.examples, abfactory.rb, action.rb,
+	  alpha.dbl, alphafill.jpg, alphafill.msk, alphafill.rb,
+	  attachmovie.rb, bitmapxform.rb, books.xml, colvar.txt, cross.rb,
+	  cxform.rb, cxform2.rb, cxform3.rb, drag.rb, duplicate.rb,
+	  dynbarchart.rb, fill.rb, fill1.rb, fill2.rb, glyph.rb,
+	  gradient.rb, gradientxform.rb, grid.rb, gyro.rb, hello.rb,
+	  hello_zoom.rb, iterator.rb, jpegfill.rb, jpegfill1.rb,
+	  keypress.rb, mingplusas.rb, mousetrack.rb, movieclip.rb,
+	  myxml.rb, newbutton.rb, observer.rb, onclipevent.rb, oval.rb,
+	  picture.jpg, png.dbl, png.rb, prebuilt.rb, singleton.rb,
+	  sparks.rb, stage.rb, startdrag.rb, text.rb, textfield.rb,
+	  ticker.rb, triangleming.rb, vars0.txt, vars1.txt, vars2.txt,
+	  visitor.rb, swfcomponent/ChangeLog, swfcomponent/Components.rb,
+	  swfcomponent/README, swfcomponent/picture.jpg,
+	  swfcomponent/scroll_ruby.rb,
+	  swfcomponent/pictures/arrow_down_active.dbl,
+	  swfcomponent/pictures/arrow_down_inactive.dbl,
+	  swfcomponent/pictures/arrow_up_active.dbl,
+	  swfcomponent/pictures/arrow_up_inactive.dbl,
+	  swfcomponent/pictures/backgroundH.dbl,
+	  swfcomponent/pictures/backgroundH_gap.dbl,
+	  swfcomponent/pictures/backgroundH_gap2.dbl,
+	  swfcomponent/pictures/backgroundV.dbl,
+	  swfcomponent/pictures/backgroundV_gap.dbl,
+	  swfcomponent/pictures/backgroundV_gap2.dbl,
+	  swfcomponent/pictures/scrollbar_active.dbl,
+	  swfcomponent/pictures/scrollbar_inactive.dbl: New examples added.
+
+2006-12-16 20:47  mcdonaec
+
+	* ext/ming/mingc/: MANIFEST, mingc.c, mingc.h, swfvideostream.c:
+	  Add streaming video support.
+
+2006-12-16 20:41  mcdonaec
+
+	* ext/ming/mingc/swfmovie.c: Fixed to work with Ming 0.3.0
+
+2004-11-08 21:14  ikegami
+
+	* ChangeLog, INSTALL, README: fix some mistakes
+
+2004-11-07 13:11  ikegami
+
+	* INSTALL, ext/ming/mingc/swffill.c: bug fixed
+
+2004-11-07 12:34  ikegami
+
+	* ChangeLog, NEWS, examples/drag.rb, examples/gradient.rb,
+	  examples/gradientxform.rb, examples/keypress.rb,
+	  examples/mousetrack.rb, examples/newbutton.rb,
+	  ext/ming/mingc/swfaction.c, ext/ming/mingc/swfbitmap.c,
+	  ext/ming/mingc/swfbrowserfont.c, ext/ming/mingc/swfbutton.c,
+	  ext/ming/mingc/swffill.c, ext/ming/mingc/swffont.c,
+	  ext/ming/mingc/swfgradient.c, ext/ming/mingc/swfmorph.c,
+	  ext/ming/mingc/swfshape.c, ext/ming/mingc/swftext.c,
+	  ext/ming/mingc/swftextfield.c, lib/ming/ming.rb: NEWS: version
+	  0.1.7 shipped.  some bugs are fixed, and it seems work with Ming
+	  0.3beta1.
+
+2004-11-03 17:55  ikegami
+
+	* ChangeLog, ext/ming/mingc/extconf.rb: apply a patch in
+	  [Mingruby-users] Install on FreeBSD
+
+2004-10-31 08:58  ikegami
+
+	* ext/ming/mingc/: swfaction.c, swfbitmap.c, swfdisplayitem.c,
+	  swfsoundinstance.c: initial commit
+
+2004-10-31 08:52  ikegami
+
+	* ChangeLog, INSTALL, README, TODO, examples/action.rb,
+	  examples/hello.rb, examples/movieclip.rb, examples/shape.rb,
+	  ext/ming/mingc/MANIFEST, ext/ming/mingc/depend,
+	  ext/ming/mingc/extconf.rb, ext/ming/mingc/mingc.c,
+	  ext/ming/mingc/mingc.h, ext/ming/mingc/swfaction.c,
+	  ext/ming/mingc/swfbitmap.c, ext/ming/mingc/swfbrowserfont.c,
+	  ext/ming/mingc/swfbutton.c, ext/ming/mingc/swfcharacter.c,
+	  ext/ming/mingc/swfdisplayitem.c, ext/ming/mingc/swffill.c,
+	  ext/ming/mingc/swffillstyle.c, ext/ming/mingc/swffont.c,
+	  ext/ming/mingc/swfgradient.c, ext/ming/mingc/swfmorph.c,
+	  ext/ming/mingc/swfmovie.c, ext/ming/mingc/swfmovieclip.c,
+	  ext/ming/mingc/swfshape.c, ext/ming/mingc/swfsoundinstance.c,
+	  ext/ming/mingc/swftext.c, ext/ming/mingc/swftextfield.c,
+	  ext/ming/mingc/util.c, ext/ming/mingc/missing/README.missing,
+	  ext/ming/mingc/missing/basename.c,
+	  ext/ming/mingc/missing/basename.h, lib/ming.rb, lib/ming/ming.rb:
+	  initial commit
+
+2004-10-30 10:42  ikegami
+
+	* doc/index.html, NEWS: initial commit
+
+2004-10-30 10:34  ikegami
+
+	* examples/README.examples, ext/ming/mingc/MANIFEST,
+	  ext/ming/mingc/extconf.rb, lib/ming.rb, tests/README.tests:
+	  initial commit
+
+2004-10-30 10:17  ikegami
+
+	* ChangeLog, ChangeLog.0, INSTALL, LGPL, README, setup.rb: initial
+	  commit
+
+2004-10-30 09:41  ikegami
+
+	* ming-ruby-old/ming-ruby-0.1.6/examples/: gradientxform.rb,
+	  gradientxform.swf: Damn!
+
+2004-10-30 09:35  ikegami
+
+	* ming-ruby/ChangeLog, ming-ruby/ChangeLog.0, ming-ruby/INSTALL,
+	  ming-ruby/LGPL, ming-ruby/README, ming-ruby/setup.rb,
+	  ming-ruby/lib/ming/ming.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/ChangeLog,
+	  ming-ruby-old/ming-ruby-0.1.6/InstalledFiles,
+	  ming-ruby-old/ming-ruby-0.1.6/LGPL,
+	  ming-ruby-old/ming-ruby-0.1.6/README.en,
+	  ming-ruby-old/ming-ruby-0.1.6/README.ja,
+	  ming-ruby-old/ming-ruby-0.1.6/Usage_en.txt,
+	  ming-ruby-old/ming-ruby-0.1.6/Usage_ja.txt,
+	  ming-ruby-old/ming-ruby-0.1.6/config.save,
+	  ming-ruby-old/ming-ruby-0.1.6/fonts.en,
+	  ming-ruby-old/ming-ruby-0.1.6/fonts.ja,
+	  ming-ruby-old/ming-ruby-0.1.6/progress.rd,
+	  ming-ruby-old/ming-ruby-0.1.6/setup.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/README,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/action.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/action.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/button.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/button.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/drag.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/drag.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradient.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradient.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/keypress.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/keypress.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/mousetrack.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/mousetrack.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/newbutton.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/newbutton.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/shape.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/shape.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sparks.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sparks.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sprite.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sprite.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/MANIFEST,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/extconf.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming.def,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming_ruby.h,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/mkmf.log,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfaction.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfbitmap.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfbutton.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfdisplayitem.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swffill.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swffont.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfgradient.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmorph.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmovie.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmovieclip.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfshape.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swftext.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swftextfield.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/util.c: Delete all
+	  contents because of my mistake :(
+
+2004-10-30 09:15  ikegami
+
+	* ming-ruby-old/ming-ruby-0.1.6/tools/translate.sed: funny reason
+	  that I have to delete some big directory because of my mistake.
+	  :(
+
+2004-10-30 08:55  ikegami
+
+	* ming-ruby/ChangeLog, ming-ruby/ChangeLog.0, ming-ruby/INSTALL,
+	  ming-ruby/LGPL, ming-ruby/README, ming-ruby/setup.rb,
+	  ming-ruby/lib/ming/ming.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/ChangeLog,
+	  ming-ruby-old/ming-ruby-0.1.6/InstalledFiles,
+	  ming-ruby-old/ming-ruby-0.1.6/config.save,
+	  ming-ruby-old/ming-ruby-0.1.6/fonts.en,
+	  ming-ruby-old/ming-ruby-0.1.6/fonts.ja,
+	  ming-ruby-old/ming-ruby-0.1.6/LGPL,
+	  ming-ruby-old/ming-ruby-0.1.6/README.en,
+	  ming-ruby-old/ming-ruby-0.1.6/README.ja,
+	  ming-ruby-old/ming-ruby-0.1.6/progress.rd,
+	  ming-ruby-old/ming-ruby-0.1.6/Usage_en.txt,
+	  ming-ruby-old/ming-ruby-0.1.6/Usage_ja.txt,
+	  ming-ruby-old/ming-ruby-0.1.6/setup.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/action.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/action.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/button.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/button.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/drag.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/drag.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradient.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradient.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradientxform.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradientxform.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/keypress.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/README,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/keypress.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/mousetrack.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/mousetrack.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/newbutton.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/newbutton.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/shape.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/shape.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sparks.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sparks.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sprite.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sprite.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/MANIFEST,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/extconf.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming.def,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming_ruby.h,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/mkmf.log,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfaction.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfbitmap.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfbutton.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfdisplayitem.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swffill.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swffont.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfgradient.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmorph.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmovie.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmovieclip.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfshape.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swftext.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swftextfield.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/util.c,
+	  ming-ruby-old/ming-ruby-0.1.6/tools/translate.sed: Initial
+	  revision
+
+2004-10-30 08:55  ikegami
+
+	* ming-ruby/ChangeLog, ming-ruby/ChangeLog.0, ming-ruby/INSTALL,
+	  ming-ruby/LGPL, ming-ruby/README, ming-ruby/setup.rb,
+	  ming-ruby/lib/ming/ming.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/ChangeLog,
+	  ming-ruby-old/ming-ruby-0.1.6/InstalledFiles,
+	  ming-ruby-old/ming-ruby-0.1.6/config.save,
+	  ming-ruby-old/ming-ruby-0.1.6/fonts.en,
+	  ming-ruby-old/ming-ruby-0.1.6/fonts.ja,
+	  ming-ruby-old/ming-ruby-0.1.6/LGPL,
+	  ming-ruby-old/ming-ruby-0.1.6/README.en,
+	  ming-ruby-old/ming-ruby-0.1.6/README.ja,
+	  ming-ruby-old/ming-ruby-0.1.6/progress.rd,
+	  ming-ruby-old/ming-ruby-0.1.6/Usage_en.txt,
+	  ming-ruby-old/ming-ruby-0.1.6/Usage_ja.txt,
+	  ming-ruby-old/ming-ruby-0.1.6/setup.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/action.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/action.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/button.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/button.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/drag.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/drag.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradient.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradient.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradientxform.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/gradientxform.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/keypress.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/README,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/keypress.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/mousetrack.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/mousetrack.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/newbutton.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/newbutton.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/shape.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/shape.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sparks.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sparks.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sprite.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/examples/sprite.swf,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/MANIFEST,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/extconf.rb,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming.def,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/ming_ruby.h,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/mkmf.log,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfaction.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfbitmap.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfbutton.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfdisplayitem.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swffill.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swffont.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfgradient.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmorph.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmovie.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfmovieclip.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swfshape.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swftext.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/swftextfield.c,
+	  ming-ruby-old/ming-ruby-0.1.6/ext/ming/ming/util.c,
+	  ming-ruby-old/ming-ruby-0.1.6/tools/translate.sed: Ming/Ruby
+	  initial import
+
